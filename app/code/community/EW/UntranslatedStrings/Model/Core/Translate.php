@@ -102,7 +102,7 @@ class EW_UntranslatedStrings_Model_Core_Translate extends Mage_Core_Model_Transl
         //loop locale(s) and find gaps
         $untranslatedPhrases = array();
         $this->_model = Mage::getModel('ew_untranslatedstrings/string');
-        $createFiles = Mage::getStoreConfig('dev/translate/untranslated_create_files');
+        $createFiles = (bool)Mage::getStoreConfig('dev/translate/untranslated_create_files');
         foreach($this->_getLocalesToCheck() as $locale) {
             if(!Mage::helper('ew_untranslatedstrings')->isTranslated($text,$code,$locale)) {
                 $untranslatedPhrases[] = array(
@@ -110,7 +110,7 @@ class EW_UntranslatedStrings_Model_Core_Translate extends Mage_Core_Model_Transl
                     'code' => $code,
                     'locale' => $locale
                 );
-                if($createFiles == 1) {
+                if($createFiles) {
                     $string = $this->_model->load($code, 'translation_code');
                     if(!$string) {
                         $module = explode('::', $code)[0];
