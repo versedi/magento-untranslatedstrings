@@ -41,7 +41,11 @@ Note that it's disabled by default.
 ## Update notes
 
 - 1.0.2
-        - added option to export strings to CSV files in `var/export/ew_untranslatedstrings` (check config/dev/translate for more information)
-        - on install it checks if tables are already existing in db - if yes it's ommiting the creation to avoid critical error.
-        - phpdocs
-        - few small improvements
+    - added option to export strings to CSV files in `var/export/ew_untranslatedstrings` (check config/dev/translate for more information)
+
+    - on install it checks if tables are already existing in db - if yes it's ommiting the creation to avoid critical error.
+
+    - phpdocs
+
+    - few small improvements
+
