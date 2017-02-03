@@ -43,7 +43,7 @@ class EW_UntranslatedStrings_Helper_Data extends Mage_Core_Helper_Abstract
      * @return bool
      */
     public function isAutoCreateEnabled() {
-        return (bool)Mage::getStoreConfig(self::CONFIG_PATH_EXPORT_AUTO_CREATE_FILES);
+        return Mage::getStoreConfigFlag(self::CONFIG_PATH_EXPORT_AUTO_CREATE_FILES);
     }
 
     /**
@@ -52,7 +52,7 @@ class EW_UntranslatedStrings_Helper_Data extends Mage_Core_Helper_Abstract
      * @return bool
      */
     public function isMergingEnabled() {
-        return (bool)Mage::getStoreConfig(self::CONFIG_PATH_EXPORT_MERGE_FILES);
+        return Mage::getStoreConfigFlag(self::CONFIG_PATH_EXPORT_MERGE_FILES);
     }
 
     /**
@@ -76,7 +76,7 @@ class EW_UntranslatedStrings_Helper_Data extends Mage_Core_Helper_Abstract
      * @return bool
      */
     public function logMatchingKeyValuePairs() {
-        return (bool)Mage::getStoreConfig(self::CONFIG_PATH_MATCHING_KEY_VALUE_PAIR_ENABLED);
+        return Mage::getStoreConfigFlag(self::CONFIG_PATH_MATCHING_KEY_VALUE_PAIR_ENABLED);
     }
 
     /**
@@ -139,7 +139,7 @@ class EW_UntranslatedStrings_Helper_Data extends Mage_Core_Helper_Abstract
      * @return bool
      */
     public function hasToCheckBatchLocales() {
-        return (bool)Mage::getStoreConfig(self::CONFIG_PATH_BATCH_LOCALES_ENABLED);
+        return Mage::getStoreConfigFlag(self::CONFIG_PATH_BATCH_LOCALES_ENABLED);
     }
 
     /**
